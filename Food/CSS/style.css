@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root{
+    --color-1: pink;
+    --color-2: purple;
+    --color-3:  white;
+    --color-4: gray;
+    --color-5: #70606069;
+    --color-6: red;
+    --color-7:yellow;
+ 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-1);
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.navbar{
+    position: sticky;
+    width: 100%; 
+    background-color: var(--color-2);
+    height:50px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    line-height: 50px;
+
+}
+.navbar-banner{
+    color:var(--color-3);
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.nav-cart{
+    color: var(--color-3);
+    width: 50px;
+    padding: 5px;
+    cursor: pointer;
+    position:relative;
+    font-size: 25px;
+}
+
+.cart-items{
+    position: absolute;
+    top: 0;
+    right:5;
+    background-color:var(--color-4);
+    height:20px;
+    width:20px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+.slider{
+    min-height: calc(50vh - 50px);
+    background:url('../images/panner3.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.brand-banner{
+     background-color: var(--color-5);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 100%;
+     transform: translate(-50%,-50%);
+     padding: 10px;
+     text-align: center;
+}
+
+.brand-banner h3{
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    color:var(--color-7);
+    text-shadow: 2px 1px 1px var(--color-6),
+    5px 1px 2px var(--color-2);
+    cursor: pointer;
+    transition: transform 0.5s ease-out;
+    animation:3s ease-out 0s 1 slideAnimation;
+}
+
+ .brand-banner h3:hover{
+    transform: scale(1.02);
+ }
+  @keyframes slideAnimation {
+    0%{transform: translateY(-100%);}
+    100%{transform: translateY(0);}
+  }
+
+ .brand-banner p{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'vibes', cursive;
+    text-shadow: 1px 0px 1px var(--color-1);
+
+}
+.menu-items{
+    background-color: var(--color-2);
+    display: flex;
+    justify-content: center;
+}
+.menu-items ul{
+    list-style-type: none;
+}
+.menu-items ul li{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+.menu-items ul li a{
+    color: var(--color-3);
+    text-decoration: none;
+}
+.menu-items ul li a:hover{
+    color: var(--color-6);
+    text-decoration: none;
+}
+#txtFoodType{
+    background-color: var(--color-7);
+    height: 80px;
+    text-align: center;
+    font-size: 50px;
+    color:var(--color-6);
+    padding: 10px;    
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 2px 1px 1px var(--color-3);
+}
+
+
